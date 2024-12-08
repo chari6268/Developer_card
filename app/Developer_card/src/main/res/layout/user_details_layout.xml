@@ -115,6 +115,7 @@
             app:cardCornerRadius="100dp"
             android:layout_centerHorizontal="true">
             <ImageView
+                android:id="@+id/chari_profile"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:src="@drawable/chari" />

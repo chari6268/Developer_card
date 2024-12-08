@@ -12,7 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class UserDetailsView extends ConstraintLayout {
     private TextView nameTextView, batchTextView;
-    private ImageView githubTextView, linkedinTextView;
+    private ImageView githubTextView, linkedinTextView, ProfileView;
 
     public UserDetailsView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -22,6 +22,7 @@ public class UserDetailsView extends ConstraintLayout {
     private void init(Context context) {
         LayoutInflater.from(context).inflate(R.layout.user_details_layout, this, true);
 
+        ProfileView = findViewById(R.id.chari_profile);
         nameTextView = findViewById(R.id.text_name);
         batchTextView = findViewById(R.id.text_batch);
         githubTextView = findViewById(R.id.chari_github);
@@ -29,6 +30,7 @@ public class UserDetailsView extends ConstraintLayout {
     }
 
     public void setUserDetails(UserDetails userDetails,Context context) {
+        ProfileView.setImageResource(userDetails.getImageView());
         nameTextView.setText(userDetails.getName());
         batchTextView.setText(userDetails.getBatch());
         githubTextView.setOnClickListener(view -> openUrl(context, userDetails.getGithubUrl()));

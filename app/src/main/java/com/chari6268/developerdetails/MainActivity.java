@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
                 "Srinivasa Chari",
                 "2021-2025",
                 "https://github.com/chari6268",
-                "https://www.linkedin.com/in/perusomula-srinivasa-chari/"
+                "https://www.linkedin.com/in/perusomula-srinivasa-chari/",
+                R.drawable.ic_launcher_background
         );
 
         UserDetailsView userDetailsView = findViewById(R.id.test);
